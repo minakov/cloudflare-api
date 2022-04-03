@@ -1,14 +1,30 @@
 {
-    "name": "cloudflare-api",
-    "version": "0.0.0",
-    "main": "src/index.js",
-    "scripts": {
-        "dev": "miniflare --watch --debug"
-    },
-    "devDependencies": {
-        "miniflare": "^2.4.0"
-    },
-    "dependencies": {
-        "itty-router": "^2.6.1"
-    }
+  "name": "cloudflare-api",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild --bundle --sourcemap --outdir=dist ./src/index.js",
+    "dev": "miniflare --watch --debug",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.4.0",
+    "esbuild": "^0.14.30",
+    "miniflare": "^2.4.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "itty-router": "^2.6.1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "engines": {
+    "node": "16.x"
+  }
 }
