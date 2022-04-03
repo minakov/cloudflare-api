@@ -1,0 +1,14 @@
+{
+    "name": "cloudflare-api",
+    "version": "0.0.0",
+    "main": "src/index.js",
+    "scripts": {
+        "dev": "miniflare --watch --debug"
+    },
+    "devDependencies": {
+        "miniflare": "^2.4.0"
+    },
+    "dependencies": {
+        "itty-router": "^2.6.1"
+    }
+}
